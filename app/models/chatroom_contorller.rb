@@ -1,0 +1,2 @@
+class ChatroomContorller < ApplicationRecord
+end
