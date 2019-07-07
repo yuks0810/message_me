@@ -10,5 +10,11 @@ class ApplicationController < ActionController::Base
     !current_user.nil?
   end
   
+  def require_user
+    if !logged_in?
+      flash[:error] = "You must be logged in to pergorm that action"
+      redirect_to login_path
+    end
+  end
   
 end
